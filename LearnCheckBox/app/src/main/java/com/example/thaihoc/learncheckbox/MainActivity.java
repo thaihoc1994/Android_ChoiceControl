@@ -33,14 +33,20 @@ public class MainActivity extends AppCompatActivity {
     private void xuLyChonMonHoc() {
         String s = "";
         if (chkAndroi.isChecked())
-            s+=chkAndroi.getText().toString();
+            s+=chkAndroi.getText().toString()+"\n";
+        if (chkWP.isChecked())
+            s+=chkWP.getText().toString() + "\n";
+        if (chkIOS.isChecked())
+            s+=chkIOS.getText().toString();
+
+        txtMonHoc.setText(s);
     }
 
     private void addControl() {
         chkAndroi = (CheckBox) findViewById(R.id.chkAndroid);
         chkWP = (CheckBox) findViewById(R.id.chkWP);
         chkIOS = (CheckBox) findViewById(R.id.chkIOS);
-        btnChon = (Button) findViewById(R.id.chkAndroid);
+        btnChon = (Button) findViewById(R.id.btnChon);
         txtMonHoc = (TextView) findViewById(R.id.txtMonhoc);
     }
 }
